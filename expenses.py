@@ -66,6 +66,10 @@ def add_expense(expense_list):
 
     description = input("Description: ").strip()
 
+    if description == "":
+        print("Description cannot be empty.")
+        return
+
     expense = {
         "date": date,
         "category": category,
