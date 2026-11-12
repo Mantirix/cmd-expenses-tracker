@@ -67,7 +67,12 @@ def main():
             break
 
         else:
-            print("Unknown command. Type HELP for assistance.")
+            if command == "":
+                print("You did not enter a command.")
+            else:
+                print("Command not recognized:", command)
+
+        print("Type HELP to view the available commands.")
 
 
 if __name__ == "__main__":
