@@ -135,7 +135,9 @@ def filter_expenses(expense_list):
         matches = True
 
         if category != "":
-            if expense["category"].lower() != category:
+            expense_category = expense["category"].lower()
+
+            if category not in expense_category:
                 matches = False
 
         if start != "":
