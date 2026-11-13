@@ -104,8 +104,12 @@ def print_expenses(expense_list):
         total += expense["amount"]
 
     print("-" * 65)
+    count = len(expense_list)
+    average = total / count
+
     print(f"Total Expenses: ${total:.2f}")
-    print(f"Number of Records: {len(expense_list)}")
+    print(f"Number of Records: {count}")
+    print(f"Average Expense: ${average:.2f}")
 
 
 def filter_expenses(expense_list):
